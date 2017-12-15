@@ -1,0 +1,379 @@
+/*css for buttons*/
+.mt-button {
+    font-family: "Roboto";
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 10px;
+    margin: 3px;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    background-color: #2196F3;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 2px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+    outline: none;
+    overflow: hidden;
+    display: inline-table;
+    position: relative;
+    cursor: pointer;
+}
+.mt-button:active {
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
+}
+.mt-button:disabled{
+    cursor:not-allowed;
+    background: rgba(0,0,0,0.12);
+    color: rgba(0,0,0,0.38);
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+}
+.rippleEffect {
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    transform: scale(0);
+    z-index: 1;
+    pointer-events: none;
+    animation: rippleEffect 0.7s ease-in-out;
+}
+@keyframes rippleEffect {
+    100% {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+
+/*css for radio buttond*/
+.mt-radio{
+    display: none;
+    position: relative;
+}
+.mt-radio+label{
+    font-family: "Roboto";
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    padding-left: 22px;
+}
+.mt-radio:disabled+label{
+    cursor:not-allowed;
+    color: rgba(0,0,0,0.38);
+}
+.mt-radio+label:before{
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 0px;
+    width: 14px;
+    height: 14px;
+    border: 2px solid #2196F3;
+    display: inline-table;
+    border-radius: 50%;   
+}
+.mt-radio:disabled +label:before{
+    border: 2px solid rgba(0,0,0,0.38);
+}
+.mt-radio+label:after{
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 2px;
+    width: 14px;
+    height: 14px;
+    background: #2196F3;
+    display: inline-table;
+    margin-right: 5px;
+    border-radius: 50%;   
+    transition: all 0.2s ease;
+}
+.mt-radio:not(:checked) + label:after {
+    opacity: 0;
+    transform: scale(0);
+}
+.mt-radio:checked + label:after {
+    opacity: 1;
+    transform: scale(0.7);
+}
+.mt-radio:checked:disabled +label:after{
+    opacity: 1;
+    background:rgba(0,0,0,0.38);
+}
+.circleRippleEffect{
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 14px;
+    height: 14px;
+    background-color: rgba(33,150,243,0.3);
+    display: inline-table;
+    border-radius: 50%;   
+    opacity: 0;
+    animation: circleRippleEffect 0.5s ease-out;
+}
+@keyframes circleRippleEffect{
+    50%{opacity: 0.6;transform: scale(3);}
+    90%{opacity: 0.3;transform: scale(3.5);}
+    100%{opacity: 0.1;transform: scale(4);}
+}
+
+/*css for checkbox*/
+.mt-checkbox{
+    display: none;
+    position: relative;
+}
+.mt-checkbox+label{
+    font-family: "Roboto";
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    padding-left: 20px;
+}
+.mt-checkbox:disabled+label{
+    cursor:not-allowed;
+    color: rgba(0,0,0,0.38);
+}
+.mt-checkbox+label:before{
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 0px;
+    border: 1px solid rgba(0,0,0,0.38);
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    border-radius: 2px;  
+}
+.mt-checkbox:checked + label:before {
+    background: #2196F3;
+    border-color: #2196F3;
+}
+.mt-checkbox:checked:disabled +label:before{
+   background: transparent;
+    border: 1px solid rgba(0,0,0,0.38);
+}
+.mt-checkbox+label:after{
+    content: '\2714';
+    position: absolute;
+    top: -1px;
+    left: 0.5px;
+    width: 14px;
+    height: 14px;
+    color:#fff;
+    display: inline-block;
+    margin-right: 5px;  
+    transition: all 0.2s ease;
+}
+.mt-checkbox:not(:checked) + label:after {
+    opacity: 0;
+    transform: scale(0);
+}
+.mt-checkbox:checked + label:after {
+    opacity: 1;
+    transform: scale(0.7);
+}
+.mt-checkbox:checked:disabled +label:after{
+    color:rgba(0,0,0,0.38);
+    transform: scale(0.8);
+}
+.checkboxRippleEffect{
+    position: absolute;
+    top: 2px;
+    left: 0px;
+    width: 14px;
+    height: 14px;
+    background-color: rgba(33,150,243,0.3);
+    display: inline-table;
+    border-radius: 50%;   
+    opacity: 0;
+    animation: checkboxRippleEffect 0.5s ease-out;
+}
+@keyframes checkboxRippleEffect{
+    50%{opacity: 0.6;transform: scale(3);}
+    90%{opacity: 0.3;transform: scale(3.5);}
+    100%{opacity: 0.1;transform: scale(4);}
+}
+
+/*css for switch*/
+.mt-switch{
+    position: relative;
+    cursor: pointer;
+    visibility: hidden;
+    margin-right: 25px;
+}
+.mt-switch:disabled{
+     cursor: not-allowed;
+}
+.mt-switch:before{
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color:rgba(0,0,0,0.38);
+    width: 40px;
+    height: 15px;
+    display: inline-block;
+    border-radius:15px;
+    overflow: hidden;
+    visibility: initial !important;
+    transition: all 0.2s ease;
+}
+.mt-switch:checked:before{
+    background-color: rgba(33,150,243,0.3);
+}
+.mt-switch:checked:disabled:before{
+    background-color:rgba(221,221,221,1);
+}
+.mt-switch:disabled:before{
+    background-color:rgba(221,221,221,1);
+}
+.mt-switch:after{
+    content: '';
+    position: absolute;
+    top:-5px;
+    left: -1px;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    background: #2196F3;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    visibility: initial !important;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    transition: all 0.2s ease;
+}
+.mt-switch:checked:after{
+    left: 16px;
+}
+.mt-switch:checked:disabled:after{
+    background-color:rgb(148,148,148);
+}
+.mt-switch:disabled:after{
+    background-color:rgb(148,148,148);
+}
+.switchRippleEffect{
+    position: absolute;
+    top: 2px;
+    left: 0px;
+    width: 14px;
+    height: 14px;
+    background-color: rgba(33,150,243,0.3);
+    display: inline-table;
+    border-radius: 50%;   
+    opacity: 0;
+    animation: switchRippleEffect 0.5s ease-out;
+}
+@keyframes switchRippleEffect{
+    50%{opacity: 0.6;transform: scale(3);}
+    90%{opacity: 0.3;transform: scale(3.5);}
+    100%{opacity: 0.1;transform: scale(4);}
+}
+
+/*css for slider*/
+.mt-slider{
+    position: relative;
+    top:-10px;
+    -webkit-appearance: none;
+    height: 3px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.8;
+    transition: all 0.2s ease;   
+}
+.mt-slider:hover{
+    opacity: 1;
+}
+.mt-slider:disabled{
+    opacity: 1;
+}
+.mt-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background-color: #2196F3;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);   
+}
+.mt-slider::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background-color: #2196F3;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+.mt-slider::-ms-thumb {
+    width: 15px;
+    height: 15px;
+    background-color: #2196F3;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+.mt-slider:disabled::-webkit-slider-thumb{
+    background-color:rgb(148,148,148);
+    cursor: not-allowed;
+}
+.mt-slider:disabled::-moz-range-thumb{
+    background-color:rgb(148,148,148);
+    cursor: not-allowed;
+}
+.mt-slider:disabled::-ms-thumb {
+    background-color:rgb(148,148,148);
+    cursor: not-allowed;
+}
+.mt-slider::-webkit-slider-progress {
+  background-color: red; 
+}
+.mt-slider::-moz-range-progress {
+  background-color: #2196F3; 
+}
+.mt-slider::-ms-fill-lower { 
+    background: #2196F3;
+}
+
+/*css for input fields*/
+.mt-form{
+    position: relative;
+}
+.mt-input{
+    padding: 2px;
+    margin-top: 27px;
+    border: 0;
+    border-bottom: 1px solid rgb(148,148,148);
+    background: transparent;
+    outline: none;
+    transition: all 0.3s linear;
+}
+.mt-input:focus{
+    border-bottom: 1px solid #2196F3; 
+}
+.mt-input:disabled{
+    color: rgba(148,148,148,0.6);
+    cursor: not-allowed;
+    border-bottom:1px solid rgba(148,148,148,0.6);
+}
+.placeholder{
+    font-family: "Roboto";
+    color:rgb(148,148,148);
+    position: absolute;
+    top:20px;
+    left: 0px;
+    pointer-events: none;
+    transition: all 0.3s linear; 
+}
+.mt-input:focus + .placeholder{
+    top:7px; 
+    font-size: 0.8em;
+    color: #2196F3;
+}
+.mt-input:disabled + .placeholder{
+    color: rgba(148,148,148,0.6);
+}
+.hasValue{
+    top:7px; 
+    font-size: 0.8em;
+    color:rgb(148,148,148);
+}
