@@ -1,12 +1,11 @@
 /*css for buttons*/
-.mt-button {
+.mt-button{
     font-family: "Roboto";
     font-size: 14px;
     font-weight: 500;
     padding: 8px 10px;
     margin: 3px;
     border: 0;
-    outline: 0;
     color: #fff;
     background-color: #2196F3;
     text-transform: uppercase;
@@ -18,6 +17,15 @@
     display: inline-table;
     position: relative;
     cursor: pointer;
+}
+.mt-button input{
+    padding: 0px;
+    background-color: #2196F3;
+    border: 0px;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+    
 }
 .mt-button:active {
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
@@ -195,6 +203,10 @@
 }
 
 /*css for switch*/
+.mt-switch-wrapper{
+    position: relative;
+    display: inline-block;
+}
 .mt-switch{
     position: relative;
     cursor: pointer;
@@ -253,20 +265,24 @@
 }
 .switchRippleEffect{
     position: absolute;
-    top: 2px;
-    left: 0px;
-    width: 14px;
-    height: 14px;
+    top: 1px;
+    left: 25px;
+    width: 15px;
+    height: 15px;
     background-color: rgba(33,150,243,0.3);
-    display: inline-table;
+    display: inline-block;
     border-radius: 50%;   
     opacity: 0;
+    transform: scale(0);
     animation: switchRippleEffect 0.5s ease-out;
 }
+.mt-switch:not(:checked) ~ .switchRippleEffect{
+    left: 8px;
+}
 @keyframes switchRippleEffect{
-    50%{opacity: 0.6;transform: scale(3);}
-    90%{opacity: 0.3;transform: scale(3.5);}
-    100%{opacity: 0.1;transform: scale(4);}
+    50%{opacity: 0.6;transform: scale(3)}
+    90%{opacity: 0.3;transform: scale(3.5)}
+    100%{opacity: 0.1;transform: scale(4)}
 }
 
 /*css for slider*/
@@ -376,4 +392,59 @@
     top:7px; 
     font-size: 0.8em;
     color:rgb(148,148,148);
+}
+/*css for loader*/
+.mt-circle-loader { 
+	width:40px;
+	height:40px;
+	fill: transparent;
+	stroke: #2196F3;
+	stroke-width: 3;
+	animation: mt-loader-dash 2s ease infinite, mt-loader-rotate 2s linear infinite;
+}
+
+@keyframes mt-loader-dash {
+	0% {
+		stroke-dasharray: 1,95;
+		stroke-dashoffset: 0;
+	}
+	50% {
+		stroke-dasharray: 85,95;
+		stroke-dashoffset: -25;
+	}
+	100% {
+		stroke-dasharray: 85,95;
+		stroke-dashoffset: -93;
+	}
+}
+
+@keyframes mt-loader-rotate {
+	0% {transform: rotate(0deg); }
+	100% {transform: rotate(360deg); }
+}
+
+/*css for progress*/
+.mt-progress{
+    position: relative;
+    width: 200px;
+    height: 3px;
+    border-radius: 3px;
+    display: inline-block;
+    overflow: hidden;
+    background-color: rgba(33,150,243,0.3);
+}
+.mt-progress:before{
+    content: '';
+    position: absolute;
+    top:0;
+    left: -150px;
+    width: 150px;
+    height: 3px;
+    display: inline-block;
+    background-color: #2196F3;
+    animation: mt-progress-process 1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+}
+@keyframes mt-progress-process {
+	0% {}
+	100% {left:200px}
 }

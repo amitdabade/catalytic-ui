@@ -6,9 +6,9 @@ Array.prototype.forEach.call(buttons, function (b) {
 });
 
 function createRipple (e) {
-    if(this.getElementsByClassName('rippleEffect').length > 0){
+    if(this.getElementsByClassName('rippleEffect').length > 1){
 //        if(this.childNodes.length>1){
-//            this.removeChild(this.childNodes[1]);
+            this.removeChild(this.childNodes[2]);
 //        }
     }
     
@@ -66,7 +66,7 @@ function createCheckboxRipple() {
 }
 
 //for material design switch
-var buttons = document.getElementsByClassName('mt-switch');
+var buttons = document.getElementsByClassName('mt-switch-wrapper');
 
 Array.prototype.forEach.call(buttons, function (b) {
    
@@ -74,9 +74,9 @@ Array.prototype.forEach.call(buttons, function (b) {
 });
 
 function createSwitchRipple() {
-//    if(this.getElementsByClassName('switchRippleEffect').length > 0){
-//        this.removeChild(this.childNodes[1]);      
-//    }
+    if(this.getElementsByClassName('switchRippleEffect').length > 1){
+        this.removeChild(this.childNodes[2]);      
+    }
     
     var circle = document.createElement('span');
     this.appendChild(circle);
@@ -121,3 +121,11 @@ function isInputEmpty(){
     }
     
 }
+//for material design input
+var loaders = document.getElementsByClassName('mt-loader');
+
+Array.prototype.forEach.call(loaders, function (b) {
+    b.innerHTML="<svg class='mt-circle-loader'><circle cx='20' cy='20' r='15'></svg>";
+});
+
+

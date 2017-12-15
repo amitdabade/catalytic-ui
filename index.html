@@ -9,9 +9,13 @@
     <body>
        
         <button class="mt-button">Button</button>    
-        <input class="mt-button" type="button" value="Input">
+        <div class="mt-button">
+            <input type="submit" value="Submit">
+        </div>
+        <div class="mt-button">
+            <input type="reset" value="Reset">
+        </div>
         <a class="mt-button" href="#">Link</a>       
-        <span class="mt-button">Span</span>
         <button class="mt-button" disabled>Button</button> 
         
         <br><br><br>
@@ -42,10 +46,18 @@
          
         <br><br><br>
         
-        <input type="checkbox" class="mt-switch">
-        <input type="checkbox" class="mt-switch"><br><br>   
-        <input type="checkbox" class="mt-switch" checked disabled><br><br> 
-        <input type="checkbox" class="mt-switch" disabled>
+        <div class="mt-switch-wrapper">
+            <input type="checkbox" class="mt-switch">
+        </div>
+        <div class="mt-switch-wrapper">
+            <input type="checkbox" class="mt-switch">
+        </div>
+        <div class="mt-switch-wrapper">
+            <input type="checkbox" class="mt-switch" disabled>
+        </div>
+        <div class="mt-switch-wrapper">
+            <input type="checkbox" class="mt-switch" checked disabled>
+        </div>
 
         
         <br><br><br>
@@ -72,6 +84,17 @@
             <input type="text" class="mt-input" id="city" value="Mumbai" disabled>
             <label class="placeholder" for="city">City</label>
         </div>
+        
+        
+        <br><br><br>
+        
+        
+        <div class="mt-loader"></div>        
+        <div class="mt-loader"></div>
+        
+        <div class="mt-progress"></div>
+        
+        <br><br><br>
         
         <script src="catalytic.js"></script>       
     </body>
