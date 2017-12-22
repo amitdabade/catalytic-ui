@@ -66,7 +66,7 @@ function createCheckboxRipple() {
 }
 
 //for material design switch
-var buttons = document.getElementsByClassName('mt-switch-wrapper');
+var buttons = document.getElementsByClassName('mt-switch');
 
 Array.prototype.forEach.call(buttons, function (b) {
    
@@ -85,21 +85,57 @@ function createSwitchRipple() {
 }
 
 //for material design slider
-var buttons = document.getElementsByClassName('mt-slider');
+var mtSliders = document.getElementsByClassName('mt-slider');
 
-Array.prototype.forEach.call(buttons, function (b) {
+Array.prototype.forEach.call(mtSliders, function (b) {
+    sliderTag = document.createElement('span');  
+    sliderTag.classList.add('mt-slider-highlight');
+    b.appendChild(sliderTag);
+    setInitWidth(b);
+    b.addEventListener('input', setWidth);
     b.addEventListener('click', createSliderRipple);
 });
-
-function createSliderRipple() {
-//    if(this.getElementsByClassName('sliderRippleEffect').length > 0){
-//        this.removeChild(this.childNodes[1]);      
-//    }
-//    
-//    var circle = document.createElement('span');
-//    this.nextElementSibling.appendChild(circle);
-//    
-//    circle.classList.add('sliderRippleEffect');
+function setInitWidth(tag) {
+    
+    var inputTag= tag.getElementsByTagName('input')[0];
+    
+    var min = parseInt(inputTag.min);
+    var max = parseInt(inputTag.max);
+    
+    var userValue= parseInt(tag.getElementsByTagName('input')[0].value);
+    
+    var hightLightWidth=(((userValue-min)*100)/(max-min));
+    
+    tag.getElementsByClassName('mt-slider-highlight')[0].style.width=hightLightWidth+'%';
+}
+function setWidth() {
+    var inputTag= this.getElementsByTagName('input')[0];
+    
+    var min = parseInt(inputTag.min);
+    var max = parseInt(inputTag.max);
+    
+    var userValue= parseInt(this.getElementsByTagName('input')[0].value);
+    
+    var hightLightWidth=(((userValue-min)*100)/(max-min));
+    
+    this.getElementsByClassName('mt-slider-highlight')[0].style.width=hightLightWidth+'%';
+}
+function createSliderRipple() {  
+     if(this.getElementsByClassName('sliderRippleEffect').length > 0){
+        this.removeChild(this.childNodes[4]);      
+    }
+    var circle = document.createElement('span');
+    this.appendChild(circle);  
+    circle.classList.add('sliderRippleEffect');
+    var inputTag= this.getElementsByTagName('input')[0];
+    
+    var min = parseInt(inputTag.min);
+    var max = parseInt(inputTag.max);
+    var userValue= parseInt(this.getElementsByTagName('input')[0].value);
+    
+    var hightLightWidth=(((userValue-min)*100)/(max-min));
+     
+    this.getElementsByClassName('sliderRippleEffect')[0].style.left='calc('+hightLightWidth+'%)';
 }
 
 //for material design input

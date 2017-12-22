@@ -25,7 +25,7 @@
     text-transform: uppercase;
     color: #fff;
     cursor: pointer;
-    
+    outline: none;
 }
 .mt-button:active {
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
@@ -56,6 +56,7 @@
 .mt-radio{
     display: none;
     position: relative;
+    outline: none;
 }
 .mt-radio+label{
     font-family: "Roboto";
@@ -63,6 +64,7 @@
     cursor: pointer;
     display: inline-block;
     padding-left: 22px;
+    outline: none;
 }
 .mt-radio:disabled+label{
     cursor:not-allowed;
@@ -129,6 +131,7 @@
 .mt-checkbox{
     display: none;
     position: relative;
+    outline: none;
 }
 .mt-checkbox+label{
     font-family: "Roboto";
@@ -136,6 +139,7 @@
     cursor: pointer;
     display: inline-block;
     padding-left: 20px;
+    outline: none;
 }
 .mt-checkbox:disabled+label{
     cursor:not-allowed;
@@ -157,32 +161,35 @@
     border-color: #2196F3;
 }
 .mt-checkbox:checked:disabled +label:before{
-   background: transparent;
+    background: transparent;
     border: 1px solid rgba(0,0,0,0.38);
 }
 .mt-checkbox+label:after{
-    content: '\2714';
+    content: '';
     position: absolute;
-    top: -1px;
-    left: 0.5px;
-    width: 14px;
-    height: 14px;
-    color:#fff;
+    top: 0px;
+    left: 3px;
+    width: 6px;
+    height: 13px;
+    color: #fff;
     display: inline-block;
-    margin-right: 5px;  
+    margin-right: 5px;
     transition: all 0.2s ease;
+    border: 2px solid;
+    border-top: transparent;
+    border-left: transparent;
 }
 .mt-checkbox:not(:checked) + label:after {
     opacity: 0;
-    transform: scale(0);
+    transform: scale(0) rotate(45deg);
 }
 .mt-checkbox:checked + label:after {
     opacity: 1;
-    transform: scale(0.7);
+    transform: scale(0.7) rotate(45deg);
 }
 .mt-checkbox:checked:disabled +label:after{
     color:rgba(0,0,0,0.38);
-    transform: scale(0.8);
+    transform: scale(0.7) rotate(45deg);
 }
 .checkboxRippleEffect{
     position: absolute;
@@ -203,20 +210,22 @@
 }
 
 /*css for switch*/
-.mt-switch-wrapper{
+.mt-switch{
     position: relative;
     display: inline-block;
+    outline: none;
 }
-.mt-switch{
+.mt-switch-box{
     position: relative;
     cursor: pointer;
     visibility: hidden;
     margin-right: 25px;
+    outline: none;
 }
-.mt-switch:disabled{
+.mt-switch-box:disabled{
      cursor: not-allowed;
 }
-.mt-switch:before{
+.mt-switch-box:before{
     content: '';
     position: absolute;
     top: 0px;
@@ -230,16 +239,16 @@
     visibility: initial !important;
     transition: all 0.2s ease;
 }
-.mt-switch:checked:before{
+.mt-switch-box:checked:before{
     background-color: rgba(33,150,243,0.3);
 }
-.mt-switch:checked:disabled:before{
+.mt-switch-box:checked:disabled:before{
     background-color:rgba(221,221,221,1);
 }
-.mt-switch:disabled:before{
+.mt-switch-box:disabled:before{
     background-color:rgba(221,221,221,1);
 }
-.mt-switch:after{
+.mt-switch-box:after{
     content: '';
     position: absolute;
     top:-5px;
@@ -254,13 +263,13 @@
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
     transition: all 0.2s ease;
 }
-.mt-switch:checked:after{
+.mt-switch-box:checked:after{
     left: 16px;
 }
-.mt-switch:checked:disabled:after{
+.mt-switch-box:checked:disabled:after{
     background-color:rgb(148,148,148);
 }
-.mt-switch:disabled:after{
+.mt-switch-box:disabled:after{
     background-color:rgb(148,148,148);
 }
 .switchRippleEffect{
@@ -276,7 +285,7 @@
     transform: scale(0);
     animation: switchRippleEffect 0.5s ease-out;
 }
-.mt-switch:not(:checked) ~ .switchRippleEffect{
+.mt-switch-box:not(:checked) ~ .switchRippleEffect{
     left: 8px;
 }
 @keyframes switchRippleEffect{
@@ -288,21 +297,19 @@
 /*css for slider*/
 .mt-slider{
     position: relative;
-    top:-10px;
+    display: inline-block;
+}
+.mt-slider input[type='range']{
     -webkit-appearance: none;
     height: 3px;
+    border-radius: 3px;
     background: #d3d3d3;
     outline: none;
-    opacity: 0.8;
+    width: 100%;
+    margin: 0px;
     transition: all 0.2s ease;   
 }
-.mt-slider:hover{
-    opacity: 1;
-}
-.mt-slider:disabled{
-    opacity: 1;
-}
-.mt-slider::-webkit-slider-thumb {
+.mt-slider input[type='range']::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 15px;
@@ -310,9 +317,17 @@
     background-color: #2196F3;
     cursor: pointer;
     border-radius: 50%;
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);   
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);  
 }
-.mt-slider::-moz-range-thumb {
+.mt-slider input[type='range']::-webkit-slider-thumb:active {
+    width: 18px;
+    height: 18px;
+}
+.mt-slider input[type='range']:disabled::-webkit-slider-thumb{
+    background-color:rgb(148,148,148);
+    cursor: not-allowed;
+}
+.mt-slider input[type='range']::-moz-range-thumb {
     width: 15px;
     height: 15px;
     background-color: #2196F3;
@@ -320,7 +335,15 @@
     border-radius: 50%;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
-.mt-slider::-ms-thumb {
+.mt-slider input[type='range']::-moz-range-thumb:active {
+    width: 18px;
+    height: 18px;
+}
+.mt-slider input[type='range']:disabled::-moz-range-thumb{
+    background-color:rgb(148,148,148);
+    cursor: not-allowed;
+}
+.mt-slider input[type='range']::-ms-thumb {
     width: 15px;
     height: 15px;
     background-color: #2196F3;
@@ -328,26 +351,51 @@
     border-radius: 50%;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
-.mt-slider:disabled::-webkit-slider-thumb{
+.mt-slider input[type='range']::-ms-thumb:active {
+    width: 18px;
+    height: 18px;
+}
+.mt-slider input[type='range']:disabled::-ms-thumb {
     background-color:rgb(148,148,148);
     cursor: not-allowed;
 }
-.mt-slider:disabled::-moz-range-thumb{
-    background-color:rgb(148,148,148);
-    cursor: not-allowed;
-}
-.mt-slider:disabled::-ms-thumb {
-    background-color:rgb(148,148,148);
-    cursor: not-allowed;
-}
-.mt-slider::-webkit-slider-progress {
-  background-color: red; 
-}
-.mt-slider::-moz-range-progress {
+
+.mt-slider input[type='range']::-webkit-slider-progress {
   background-color: #2196F3; 
 }
-.mt-slider::-ms-fill-lower { 
+.mt-slider input[type='range']::-moz-range-progress {
+  background-color: #2196F3; 
+}
+.mt-slider input[type='range']::-ms-fill-lower { 
     background: #2196F3;
+}
+
+.mt-slider input[type='range']:not(:disabled) ~ .mt-slider-highlight{
+    position: absolute;
+    top: 11.1px;
+    left: 0px;
+    height: 3px;
+    background-color: #2196F3;
+    pointer-events: none;
+    border-radius: 3px;
+}
+.sliderRippleEffect{
+    position: absolute;
+    top: 12px;
+    box-sizing: border-box;
+    width: 1px;
+    height: 1px;
+    background-color: rgba(33,150,243,0.3);
+    display: inline-table;
+    border-radius: 50%;   
+    opacity: 0;
+    pointer-events: none;
+    animation: sliderRippleEffect 0.5s ease-out;
+}
+@keyframes sliderRippleEffect{
+    50%{opacity: 0.6;transform: scale(43);}
+    90%{opacity: 0.3;transform: scale(43.5);}
+    100%{opacity: 0.1;transform: scale(44);}
 }
 
 /*css for input fields*/
@@ -431,14 +479,17 @@
     border-radius: 3px;
     display: inline-block;
     overflow: hidden;
-    background-color: rgba(33,150,243,0.3);
+    background-color: rgba(33,150,243,0.2);
+}
+.mt-progress::-webkit-progress-bar{
+    background-color: rgba(33,150,243,0.2);
 }
 .mt-progress:before{
     content: '';
     position: absolute;
     top:0;
-    left: -150px;
-    width: 150px;
+    left: -75%;
+    width: 75%;
     height: 3px;
     display: inline-block;
     background-color: #2196F3;
@@ -446,5 +497,5 @@
 }
 @keyframes mt-progress-process {
 	0% {}
-	100% {left:200px}
+	100% {left:100%}
 }
