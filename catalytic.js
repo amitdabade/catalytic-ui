@@ -75,7 +75,7 @@ Array.prototype.forEach.call(buttons, function (b) {
 
 function createSwitchRipple() {
     if(this.getElementsByClassName('switchRippleEffect').length > 1){
-        this.removeChild(this.childNodes[2]);      
+//        this.removeChild(this.childNodes[2]);      
     }
     
     var circle = document.createElement('span');

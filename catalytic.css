@@ -1,31 +1,35 @@
 /*css for buttons*/
 .mt-button{
     font-family: "Roboto";
-    font-size: 14px;
+    font-size: 1em;
     font-weight: 500;
-    padding: 8px 10px;
+    padding: 10px 10px;
     margin: 3px;
     border: 0;
     color: #fff;
-    background-color: #2196F3;
+    background-color: #3f51b5;
     text-transform: uppercase;
     text-decoration: none;
     border-radius: 2px;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
     outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     overflow: hidden;
     display: inline-table;
     position: relative;
     cursor: pointer;
+    font-weight: 400;
 }
 .mt-button input{
+    font-size: 1em;
     padding: 0px;
-    background-color: #2196F3;
+    background-color: #3f51b5;
     border: 0px;
     text-transform: uppercase;
     color: #fff;
     cursor: pointer;
     outline: none;
+    font-weight: 400;
 }
 .mt-button:active {
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
@@ -63,8 +67,9 @@
     position: relative;
     cursor: pointer;
     display: inline-block;
-    padding-left: 22px;
+    padding-left: 24px;
     outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .mt-radio:disabled+label{
     cursor:not-allowed;
@@ -73,12 +78,12 @@
 .mt-radio+label:before{
     content: '';
     position: absolute;
-    top: 1px;
+    top: 0px;
     left: 0px;
-    width: 14px;
-    height: 14px;
-    border: 2px solid #2196F3;
-    display: inline-table;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #3f51b5;
+    display: inline-block;
     border-radius: 50%;   
 }
 .mt-radio:disabled +label:before{
@@ -87,12 +92,12 @@
 .mt-radio+label:after{
     content: '';
     position: absolute;
-    top: 3px;
+    top: 2px;
     left: 2px;
-    width: 14px;
-    height: 14px;
-    background: #2196F3;
-    display: inline-table;
+    width: 16px;
+    height: 16px;
+    background: #3f51b5;
+    display: inline-block;
     margin-right: 5px;
     border-radius: 50%;   
     transition: all 0.2s ease;
@@ -111,20 +116,20 @@
 }
 .circleRippleEffect{
     position: absolute;
-    top: 2px;
-    left: 2px;
+    top: 3px;
+    left: 3px;
     width: 14px;
     height: 14px;
-    background-color: rgba(33,150,243,0.3);
+    background-color: rgba(33,150,243,0.2);
     display: inline-table;
     border-radius: 50%;   
     opacity: 0;
-    animation: circleRippleEffect 0.5s ease-out;
+    animation: circleRippleEffect 0.3s ease-out;
 }
 @keyframes circleRippleEffect{
-    50%{opacity: 0.6;transform: scale(3);}
-    90%{opacity: 0.3;transform: scale(3.5);}
-    100%{opacity: 0.1;transform: scale(4);}
+    50%{opacity: 0.6;transform: scale(2.8);}
+    90%{opacity: 0.3;transform: scale(3.2);}
+    100%{opacity: 0.1;transform: scale(3.8);}
 }
 
 /*css for checkbox*/
@@ -138,8 +143,9 @@
     position: relative;
     cursor: pointer;
     display: inline-block;
-    padding-left: 20px;
+    padding-left: 24px;
     outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .mt-checkbox:disabled+label{
     cursor:not-allowed;
@@ -148,17 +154,17 @@
 .mt-checkbox+label:before{
     content: '';
     position: absolute;
-    top: 2px;
+    top: 0px;
     left: 0px;
     border: 1px solid rgba(0,0,0,0.38);
-    width: 12px;
-    height: 12px;
+    width: 16px;
+    height: 16px;
     display: inline-block;
     border-radius: 2px;  
 }
 .mt-checkbox:checked + label:before {
-    background: #2196F3;
-    border-color: #2196F3;
+    background: #3f51b5;
+    border-color: #3f51b5;
 }
 .mt-checkbox:checked:disabled +label:before{
     background: transparent;
@@ -168,7 +174,7 @@
     content: '';
     position: absolute;
     top: 0px;
-    left: 3px;
+    left: 5px;
     width: 6px;
     height: 13px;
     color: #fff;
@@ -185,35 +191,38 @@
 }
 .mt-checkbox:checked + label:after {
     opacity: 1;
-    transform: scale(0.7) rotate(45deg);
+    transform: scale(0.8) rotate(45deg);
 }
 .mt-checkbox:checked:disabled +label:after{
     color:rgba(0,0,0,0.38);
-    transform: scale(0.7) rotate(45deg);
+    transform: scale(0.8) rotate(45deg);
 }
 .checkboxRippleEffect{
     position: absolute;
     top: 2px;
-    left: 0px;
+    left: 2px;
     width: 14px;
     height: 14px;
-    background-color: rgba(33,150,243,0.3);
+    background-color: rgba(33,150,243,0.2);
     display: inline-table;
     border-radius: 50%;   
     opacity: 0;
-    animation: checkboxRippleEffect 0.5s ease-out;
+    animation: checkboxRippleEffect 0.3s ease-out;
 }
 @keyframes checkboxRippleEffect{
-    50%{opacity: 0.6;transform: scale(3);}
-    90%{opacity: 0.3;transform: scale(3.5);}
-    100%{opacity: 0.1;transform: scale(4);}
+    50%{opacity: 0.6;transform: scale(2.8);}
+    90%{opacity: 0.3;transform: scale(3.2);}
+    100%{opacity: 0.1;transform: scale(3.8);}
 }
 
 /*css for switch*/
 .mt-switch{
+    font-family: Roboto;
     position: relative;
     display: inline-block;
     outline: none;
+    margin: 8px 0px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .mt-switch-box{
     position: relative;
@@ -221,6 +230,7 @@
     visibility: hidden;
     margin-right: 25px;
     outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .mt-switch-box:disabled{
      cursor: not-allowed;
@@ -256,7 +266,7 @@
     width: 25px;
     height: 25px;
     display: inline-block;
-    background: #2196F3;
+    background: #3f51b5;
     border-radius: 50%;
     transition: all 0.3s ease;
     visibility: initial !important;
@@ -305,6 +315,7 @@
     border-radius: 3px;
     background: #d3d3d3;
     outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     width: 100%;
     margin: 0px;
     transition: all 0.2s ease;   
@@ -314,7 +325,7 @@
     appearance: none;
     width: 15px;
     height: 15px;
-    background-color: #2196F3;
+    background-color: #3f51b5;
     cursor: pointer;
     border-radius: 50%;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);  
@@ -330,7 +341,7 @@
 .mt-slider input[type='range']::-moz-range-thumb {
     width: 15px;
     height: 15px;
-    background-color: #2196F3;
+    background-color: #3f51b5;
     cursor: pointer;
     border-radius: 50%;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
@@ -346,7 +357,7 @@
 .mt-slider input[type='range']::-ms-thumb {
     width: 15px;
     height: 15px;
-    background-color: #2196F3;
+    background-color: #3f51b5;
     cursor: pointer;
     border-radius: 50%;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
@@ -361,21 +372,21 @@
 }
 
 .mt-slider input[type='range']::-webkit-slider-progress {
-  background-color: #2196F3; 
+  background-color: #3f51b5; 
 }
 .mt-slider input[type='range']::-moz-range-progress {
-  background-color: #2196F3; 
+  background-color: #3f51b5; 
 }
 .mt-slider input[type='range']::-ms-fill-lower { 
-    background: #2196F3;
+    background: #3f51b5;
 }
 
 .mt-slider input[type='range']:not(:disabled) ~ .mt-slider-highlight{
     position: absolute;
-    top: 11.1px;
+    top: 12px;
     left: 0px;
     height: 3px;
-    background-color: #2196F3;
+    background-color: #3f51b5;
     pointer-events: none;
     border-radius: 3px;
 }
@@ -403,16 +414,18 @@
     position: relative;
 }
 .mt-input{
+    font-size: 1em;
     padding: 2px;
     margin-top: 27px;
     border: 0;
     border-bottom: 1px solid rgb(148,148,148);
     background: transparent;
     outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     transition: all 0.3s linear;
 }
 .mt-input:focus{
-    border-bottom: 1px solid #2196F3; 
+    border-bottom: 1px solid #3f51b5; 
 }
 .mt-input:disabled{
     color: rgba(148,148,148,0.6);
@@ -431,7 +444,7 @@
 .mt-input:focus + .placeholder{
     top:7px; 
     font-size: 0.8em;
-    color: #2196F3;
+    color: #3f51b5;
 }
 .mt-input:disabled + .placeholder{
     color: rgba(148,148,148,0.6);
@@ -446,7 +459,7 @@
 	width:40px;
 	height:40px;
 	fill: transparent;
-	stroke: #2196F3;
+	stroke: #3f51b5;
 	stroke-width: 3;
 	animation: mt-loader-dash 2s ease infinite, mt-loader-rotate 2s linear infinite;
 }
@@ -492,10 +505,19 @@
     width: 75%;
     height: 3px;
     display: inline-block;
-    background-color: #2196F3;
+    background-color: #3f51b5;
     animation: mt-progress-process 1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
 }
 @keyframes mt-progress-process {
 	0% {}
 	100% {left:100%}
+}
+.mt-card{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px; 
+    box-sizing: border-box;
+    display: block;
+    border-radius: 4px;
+    box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.4);
 }
