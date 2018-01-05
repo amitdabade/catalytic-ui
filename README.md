@@ -1,6 +1,6 @@
 # Catalytic-UI
 
-[![Catalytic-UI](http://icons.iconarchive.com/icons/graphicloads/medical-health/128/formula-icon.png)]
+![Catalytic-UI](http://icons.iconarchive.com/icons/graphicloads/medical-health/128/formula-icon.png)
 
 
 Catalytic-UI is lightweight CSS framework based on material design guidlines of Google.
