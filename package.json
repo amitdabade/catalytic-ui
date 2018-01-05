@@ -1,0 +1,17 @@
+{
+  "name": "catalytic-ui",
+  "version": "1.0.0",
+  "author": "Amit D",
+  "license": "ISC",
+  "description": "Catalytic-UI (Web components library) based on material design.",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  },
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
