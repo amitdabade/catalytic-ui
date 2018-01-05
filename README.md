@@ -1,4 +1,5 @@
 # Catalytic-UI
+[![Catalytic-UI](http://icons.iconarchive.com/icons/graphicloads/medical-health/256/formula-icon.png)]
 Catalytic-UI is lightweight CSS framework based on material design guidlines of Google.
 
 **Use From the CDN:**
@@ -10,7 +11,9 @@ Catalytic-UI is lightweight CSS framework based on material design guidlines of 
 
 Alternatively you can download repository and start using locally. 
 
+
 **Quickstart**
+
 HTML boilerplate
 
 ```html
@@ -29,4 +32,7 @@ HTML boilerplate
 </html>
 ```
 
+
 Check out demo - [Demo](https://codepen.io/amitdabade/pen/rpGQyV)
+
+
