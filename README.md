@@ -8,9 +8,11 @@ Catalytic-UI is lightweight CSS framework based on material design guidlines of 
 <script src="https://cdn.rawgit.com/amitdabade/catalytic-ui/master/src/catalytic.js"></script>
 ```
 
-Alternatively you can download this repository and use locally. 
+Alternatively you can download repository and start using locally. 
 
 **Quickstart**
+HTML boilerplate
+
 ```html
 <!DOCTYPE html>
 <html>
