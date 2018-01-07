@@ -9,7 +9,7 @@ Array.prototype.forEach.call(toggleButtons, function (b) {
     b.addEventListener('click', createRipple);
 });
 
-var listView = document.getElementsByClassName('mt-list');
+var listView = document.getElementsByClassName('mt-list-item');
 Array.prototype.forEach.call(listView, function (b) {
     b.addEventListener('click', createRipple);
 });

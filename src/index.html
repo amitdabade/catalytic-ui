@@ -53,7 +53,7 @@
                 <div class="mt-tabs">
                     <div class="mt-tab">
                         <label class="mt-tab-label">
-                            <input type="radio" name="mt-tabs" data-tab='1' checked>
+                            <input type="radio" name="mt-tabs" data-tab='1'>
                             <span>Tab1</span>
                         </label>
                         
@@ -66,7 +66,7 @@
                     </div>
                     <div class="mt-tab">
                         <label class="mt-tab-label">
-                            <input type="radio" name="mt-tabs" data-tab='3'>
+                            <input type="radio" name="mt-tabs" data-tab='3' checked>
                             <span>Tab3</span>
                         </label>               
                     </div>
@@ -288,14 +288,31 @@
                             </div>
                         </form>
                     </mt-card>
-        <mt-card>
-            <ul class="mt-list">
-                <li><a href="#!">Apple</a></li>
-                <li><a href="#!">Banana</a></li>
-                <li><a href="#!">Cherry</a></li>
-                <li><a href="#!">Mango</a></li>
-            </ul>
-        </mt-card>
+                    <mt-card>
+                        <div class="mt-list">
+                            <ul>
+                                <li><a class="mt-list-item" href="#!">Apple</a></li>
+                                <li><a class="mt-list-item" href="#!">Banana</a></li>
+                                <li><a class="mt-list-item" href="#!">Cherry</a></li>
+                                <li><a class="mt-list-item" href="#!">Mango</a></li>
+                            </ul>
+                        </div>
+                    </mt-card>
+                    
+                    <mt-card>
+                        <div class='mt-star-rating'>
+                            <input type='radio' name='stars' id='star5' class='mt-star'>
+                            <label for='star5'></label>
+                            <input type='radio' name='stars' id='star4' class='mt-star' checked>
+                            <label for='star4'></label>
+                            <input type='radio' name='stars' id='star3' class='mt-star'>
+                            <label for='star3'></label>
+                            <input type='radio' name='stars' id='star2' class='mt-star'>
+                            <label for='star2'></label> 
+                            <input type='radio' name='stars' id='star1' class='mt-star'>
+                            <label for='star1'></label>
+                        </div>
+                    </mt-card>
                 </div>
                 
             </div> 

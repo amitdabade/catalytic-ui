@@ -786,14 +786,14 @@ mt-card, .mt-card {
         .mt-side-menu-container{
             position: absolute;
             top:0;
-            left:-75%;
-//            transform: translateX(-300px);
+//            left:-75%;
+            transform: translateX(-300px);
             width: 70%;
             max-width: 300px;
             height: 100vh;
             background: #fff;
             box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
-            transition: all 0.3s ease-in-out;
+            transition: all 0.3s linear;
             z-index: 2;
             overflow-y: scroll;
             
@@ -823,8 +823,8 @@ mt-card, .mt-card {
             }
         }
         .mt-side-menu-open{
-            left:0;
-//            transform: translateX(0px);
+//            left:0;
+            transform: translateX(0px);
         }
         .mt-side-menu-backdrop{
             position: absolute;
@@ -921,16 +921,16 @@ mt-card, .mt-card {
 }
 
 .mt-list{
-//    border: 1px solid #eee;
-//    ul{
+    ul{
         padding: 0;
         margin: 0;
         font-family: Roboto;
+        border: 1px solid #ddd;
         li{
             position: relative;
             overflow: hidden;
             list-style: none;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid #ddd;
             &:last-child{
                     border-bottom: 0px;
                 }
@@ -945,10 +945,36 @@ mt-card, .mt-card {
                 }
             }
         }
-//    }
+    }
 }
 
+.mt-star-rating{
+    display:inline-block;
+    
+    label{
+        cursor:pointer;
+        display:inline-block;
+        float:right;
+        text-shadow: 1px 0px rgba(0,0,0,0.3);
+        outline: none;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        
+        &:before{
+            content:'\2605';
+            font-size:2.5em;
+            color:#ddd;
+            transition:all 0.3s ease;
+        }
+  }
+  input{
+    display:none;
+        &:checked ~ label:before{
+            content:'\2605';
+            color:gold;
+        }
+    }
 
+}
 
 
 

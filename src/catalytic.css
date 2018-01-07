@@ -600,13 +600,13 @@ mt-card, .mt-card {
     .mt-drawer .mt-side-menu .mt-side-menu-container {
       position: absolute;
       top: 0;
-      left: -75%;
+      transform: translateX(-300px);
       width: 70%;
       max-width: 300px;
       height: 100vh;
       background: #fff;
       box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-      transition: all 0.3s ease-in-out;
+      transition: all 0.3s linear;
       z-index: 2;
       overflow-y: scroll; }
       .mt-drawer .mt-side-menu .mt-side-menu-container .mt-side-menu-top {
@@ -627,7 +627,7 @@ mt-card, .mt-card {
             padding: 15px;
             padding-left: 25px; }
     .mt-drawer .mt-side-menu .mt-side-menu-open {
-      left: 0; }
+      transform: translateX(0px); }
     .mt-drawer .mt-side-menu .mt-side-menu-backdrop {
       position: absolute;
       top: 0;
@@ -699,24 +699,45 @@ mt-card, .mt-card {
   display: none;
   padding: 15px; }
 
-.mt-list {
+.mt-list ul {
   padding: 0;
   margin: 0;
-  font-family: Roboto; }
-  .mt-list li {
+  font-family: Roboto;
+  border: 1px solid #ddd; }
+  .mt-list ul li {
     position: relative;
     overflow: hidden;
     list-style: none;
-    border-bottom: 1px solid #eee; }
-    .mt-list li:last-child {
+    border-bottom: 1px solid #ddd; }
+    .mt-list ul li:last-child {
       border-bottom: 0px; }
-    .mt-list li a {
+    .mt-list ul li a {
       text-decoration: none;
       display: block;
       padding: 10px;
       color: #000; }
-      .mt-list li a:hover {
+      .mt-list ul li a:hover {
         background: #eee; }
+
+.mt-star-rating {
+  display: inline-block; }
+  .mt-star-rating label {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    text-shadow: 1px 0px rgba(0, 0, 0, 0.3);
+    outline: none;
+    -webkit-tap-highlight-color: transparent; }
+    .mt-star-rating label:before {
+      content: '\2605';
+      font-size: 2.5em;
+      color: #ddd;
+      transition: all 0.3s ease; }
+  .mt-star-rating input {
+    display: none; }
+    .mt-star-rating input:checked ~ label:before {
+      content: '\2605';
+      color: gold; }
 
 .mt-show {
   display: block !important; }
