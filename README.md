@@ -1,11 +1,11 @@
 <div align="center">
-  <img width="200" src="http://icons.iconarchive.com/icons/graphicloads/medical-health/128/formula-icon.png">
+  <img src="http://icons.iconarchive.com/icons/graphicloads/medical-health/128/formula-icon.png">
   <h1>Catalytic-UI</h1>
   
   Catalytic-UI is lightweight CSS framework for hybrid Android app development based on [Google's Material Design](https://www.google.com/design/spec/material-design/introduction.html).
 
 </div>
-<hr>
+<hr/>
 **Use From the CDN:**
 
 ```html
