@@ -1,9 +1,10 @@
-# Catalytic-UI
+<div align="center">
+  <img width="200" src="http://icons.iconarchive.com/icons/graphicloads/medical-health/128/formula-icon.png">
+  <h1>Catalytic-UI</h1>
+  
+  Catalytic-UI is lightweight CSS framework for hybrid Android app development based on [Google's Material Design](https://www.google.com/design/spec/material-design/introduction.html).
 
-![Catalytic-UI](http://icons.iconarchive.com/icons/graphicloads/medical-health/128/formula-icon.png)
-
-
-Catalytic-UI is lightweight CSS framework based on material design guidelines of Google.
+</div>
 
 **Use From the CDN:**
 
@@ -40,3 +41,7 @@ HTML boilerplate
 Check out demo - [Demo](https://codepen.io/amitdabade/pen/rpGQyV)
 
 
+## License
+
+This project is licensed under the terms of the
+[MIT license](/LICENSE).
