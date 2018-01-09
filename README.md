@@ -5,7 +5,7 @@
   Catalytic-UI is lightweight CSS framework for hybrid Android app development based on [Google's Material Design](https://www.google.com/design/spec/material-design/introduction.html).
 
 </div>
-
+<hr/>
 
 **Use From the CDN:**
 
@@ -15,7 +15,6 @@
 ```
 
 Alternatively you can download repository and start using locally. 
-<hr/>
 
 **QUICKSTART:**
 
