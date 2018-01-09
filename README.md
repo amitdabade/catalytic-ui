@@ -7,7 +7,7 @@
 </div>
 
 
-# Use From the CDN:
+**Use From the CDN:**
 
 ```html
 <link href="https://cdn.rawgit.com/amitdabade/catalytic-ui/master/src/catalytic.css" rel="stylesheet" type="text/css" />
@@ -15,9 +15,9 @@
 ```
 
 Alternatively you can download repository and start using locally. 
+<hr/>
 
-
-# QUICKSTART:
+**QUICKSTART:**
 
 HTML boilerplate
 
