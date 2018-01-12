@@ -10,8 +10,8 @@
 **Use From the CDN:**
 
 ```html
-<link href="https://cdn.rawgit.com/amitdabade/catalytic-ui/master/src/catalytic.css" rel="stylesheet" type="text/css" />
-<script src="https://cdn.rawgit.com/amitdabade/catalytic-ui/master/src/catalytic.js"></script>
+<link href="https://cdn.rawgit.com/amitdabade/catalytic-ui/master/src/catalytic.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.rawgit.com/amitdabade/catalytic-ui/master/src/catalytic.min.js"></script>
 ```
 
 Alternatively you can download repository and start using locally. 
