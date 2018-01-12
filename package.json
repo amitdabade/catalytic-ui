@@ -4,11 +4,16 @@
   "author": "Amit D",
   "license": "ISC",
   "description": "Catalytic-UI (Web components library) based on material design.",
-  "dependencies": {},
+  "dependencies": {
+    "save": "^2.3.2"
+  },
   "devDependencies": {
     "browser-sync": "^2.18.13",
     "gulp": "^3.9.1",
-    "gulp-sass": "^3.1.0"
+    "gulp-clean-css": "^3.9.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0"
   },
   "main": "gulpfile.js",
   "scripts": {
