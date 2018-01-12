@@ -2,7 +2,7 @@
   <img src="http://icons.iconarchive.com/icons/graphicloads/medical-health/128/formula-icon.png">
   <h1>Catalytic-UI</h1>
   
-  Catalytic-UI is lightweight CSS framework for hybrid Android app development based on <u>Google's Material Design<u>
+  <p>Catalytic-UI is lightweight CSS framework for hybrid Android app development based on <u>Google's Material Design</u></p>
 
 </div>
 <hr/>
@@ -10,8 +10,8 @@
 **Use From the CDN:**
 
 ```html
-<link href="https://cdn.rawgit.com/amitdabade/catalytic-ui/e4c1bef3/src/catalytic.min.css" rel="stylesheet" type="text/css" />
-<script src="https://cdn.rawgit.com/amitdabade/catalytic-ui/e4c1bef3/src/catalytic.min.css"></script>
+<link href="https://cdn.rawgit.com/amitdabade/catalytic-ui/master/src/catalytic.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.rawgit.com/amitdabade/catalytic-ui/master/src/catalytic.min.js"></script>
 ```
 
 Alternatively you can download repository and start using locally. 
@@ -26,12 +26,12 @@ HTML boilerplate
   <head>
     <title>Catalytic UI</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.rawgit.com/amitdabade/catalytic-ui/master/src/catalytic.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.rawgit.com/amitdabade/catalytic-ui/master/src/catalytic.min.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   </head>
   <body>
     <button class="mt-button">Button</button>
-    <script src="https://cdn.rawgit.com/amitdabade/catalytic-ui/master/src/catalytic.js"></script>
+    <script src="https://cdn.rawgit.com/amitdabade/catalytic-ui/master/src/catalytic.min.js"></script>
   </body>
 </html>
 ```
