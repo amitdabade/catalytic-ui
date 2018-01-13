@@ -1,9 +1,23 @@
-$primary-color:#2196F3;
-$primary-color-alpha:rgba(63,81,181,0.2);
-/*css for buttons*/
+/*! catalytic.js
+ * Copyright (c) 2018 Catalytic-UI
+ * Licensed under the MIT license */
 
+$primary-color:#2196F3;
+
+[class^="mt-"], [class*=" mt-"] {
+  font-family: 'Roboto' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/*css for raised buttons*/
 .mt-button {
-    font-family: "Roboto";
+//    font-family: "Roboto";
     font-size: 1em;
     padding: 10px 10px;
     margin: 3px;
@@ -24,7 +38,7 @@ $primary-color-alpha:rgba(63,81,181,0.2);
     z-index: 2;
     transition: all 0.5s ease;
     input,button {
-        font-family: "Roboto";
+//        font-family: "Roboto";
         font-size: 1em;
         padding: 0px;
         background-color: $primary-color;
@@ -45,6 +59,7 @@ $primary-color-alpha:rgba(63,81,181,0.2);
         box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
     }
 }
+/*css for flat buttons*/
 .mt-button-flat{
     background-color: transparent;
     color: $primary-color;
@@ -63,6 +78,7 @@ $primary-color-alpha:rgba(63,81,181,0.2);
         color: rgba(0, 0, 0, 0.4);
     }
 }
+/*css for fab buttons*/
 .mt-button-fab{
     border-radius: 50%;
     width: 50px;
@@ -73,8 +89,9 @@ $primary-color-alpha:rgba(63,81,181,0.2);
     margin: 25px;
     z-index: 6;
 }
-//ripple for button
-.rippleEffect {
+
+//ripple for buttons
+.rippleEffect{
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.4);
     position: absolute;
@@ -82,7 +99,15 @@ $primary-color-alpha:rgba(63,81,181,0.2);
     pointer-events: none;
     animation: rippleEffect 0.7s ease-in-out;
 }
-
+//dark ripple for light buttons
+.rippleDarkEffect{
+    border-radius: 50%;
+    background-color: rgba(148, 148, 148, 0.4);
+    position: absolute;
+    transform: scale(0);
+    pointer-events: none;
+    animation: rippleEffect 0.7s ease-in-out;
+}
 @keyframes rippleEffect {
   100% {
     transform: scale(3);
@@ -90,11 +115,11 @@ $primary-color-alpha:rgba(63,81,181,0.2);
   }
 }
 
-
+/*css for toggle buttons*/
 .mt-toggle-button{
     position:relative;
     overflow:hidden;
-    font-family: Roboto;
+//    font-family: Roboto;
     text-align: center;
     background:#ddd;
     display: inline-table;
@@ -128,13 +153,10 @@ $primary-color-alpha:rgba(63,81,181,0.2);
 }
 
 
-
-
 /*css for radio button*/
-
 .mt-radio {
     position: relative;
-    font-family: "Roboto";
+//    font-family: "Roboto";
     display: inline-block;
     outline: none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -209,40 +231,41 @@ $primary-color-alpha:rgba(63,81,181,0.2);
         }
     }
 }
+/*ripple for radio button*/
 .radioRippleEffect {
     position: absolute;
     top: 3px;
     left: 4px;
     width: 14px;
     height: 14px;
-    background-color: $primary-color-alpha;
+    background-color: $primary-color;
     display: inline-block;
     border-radius: 50%;
     opacity: 0;
     pointer-events:none;
     animation: circleRippleEffect 0.3s ease-out;
 }
-
 @keyframes circleRippleEffect {
   50% {
-    opacity: 0.6;
+    opacity: 0.2;
     transform: scale(2.8);
   }
 
   90% {
-    opacity: 0.3;
+    opacity: 0.1;
     transform: scale(3.2);
   }
 
   100% {
-    opacity: 0.1;
+    opacity: 0;
     transform: scale(3.8);
   }
 }
 
+/*css for checkbox*/
 .mt-checkbox {
     position: relative;
-    font-family: "Roboto";
+//    font-family: "Roboto";
     display: inline-block;
     outline: none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -320,43 +343,40 @@ $primary-color-alpha:rgba(63,81,181,0.2);
         }
     }
 }
-
-
+/*ripple for checkbox*/
 .checkboxRippleEffect {
-  position: absolute;
-  top: 3px;
-  left: 3px;
-  width: 14px;
-  height: 14px;
-  background-color: $primary-color-alpha;
-  display: inline-table;
-  border-radius: 50%;
-  opacity: 0;
-  animation: checkboxRippleEffect 0.3s ease-out;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 14px;
+    height: 14px;
+    background-color: $primary-color;
+    display: inline-table;
+    border-radius: 50%;
+    opacity: 0;
+    animation: checkboxRippleEffect 0.3s ease-out;
 }
-
 @keyframes checkboxRippleEffect {
   50% {
-    opacity: 0.6;
+    opacity: 0.2;
     transform: scale(2.8);
   }
 
   90% {
-    opacity: 0.3;
+    opacity: 0.1;
     transform: scale(3.2);
   }
 
   100% {
-    opacity: 0.1;
+    opacity: 0;
     transform: scale(3.8);
   }
 }
 
 
 /*css for switch*/
-
 .mt-switch {
-    font-family: Roboto;
+//    font-family: Roboto;
     position: relative;
     display: inline-block;
     outline: none;
@@ -409,7 +429,8 @@ $primary-color-alpha:rgba(63,81,181,0.2);
                 }
                 &:checked {
                     &:before {
-                        background-color: $primary-color-alpha;
+                        background-color: $primary-color;
+                        opacity: 0.4;
                     }
                     &:after {
                         left: 16px;
@@ -417,25 +438,24 @@ $primary-color-alpha:rgba(63,81,181,0.2);
                     }
                     
                     &:disabled:before {
-                        background-color: rgba(221, 221, 221, 1);
+                        background-color: rgba(153,153,153,1);
                     }
                 }
                 
                 &:not(:checked) ~ .switchRippleEffect {
-                    left:5px;
+                    left:4px;
                 }
                 &:disabled{
                     cursor: not-allowed;
                     &:before {
-                        background-color: rgba(221, 221, 221, 1);
+                        background-color: rgba(153,153,153,0.4);
                     }
                     &:after {
                         background-color: rgb(148, 148, 148);
                     }
                 }
 
-                &:checked {
-                    
+                &:checked {               
                     &:disabled:after {
                         background-color: rgb(148, 148, 148);
                     }
@@ -446,44 +466,40 @@ $primary-color-alpha:rgba(63,81,181,0.2);
         }
     }
 }
+/*ripple for switch*/
 .switchRippleEffect {
     position: absolute;
     top: 0px;
-    left: 22px;
+    left: 21px;
     width: 15px;
     height: 15px;
-    background-color: $primary-color-alpha;
+    background-color: $primary-color;
     display: inline-block;
     border-radius: 50%;
     opacity: 0;
     transform: scale(0);
-    animation: switchRippleEffect 0.5s ease-out;
-}
-
-.mt-switch-input:not(:checked) ~ .switchRippleEffect {
-    left: 8px;
+    animation: switchRippleEffect 0.5s ease-out 0.0s;
 }
 
 @keyframes switchRippleEffect {
     50% {
-        opacity: 0.6;
+        opacity: 0.2;
         transform: scale(3);
     }
 
     90% {
-        opacity: 0.3;
+        opacity: 0.1;
         transform: scale(3.5);
     }
 
     100% {
-        opacity: 0.1;
+        opacity: 0;
         transform: scale(4);
     }
 }
 
 
 /*css for slider*/
-
 .mt-slider {
     position: relative;
     display: inline-block;
@@ -507,15 +523,13 @@ $primary-color-alpha:rgba(63,81,181,0.2);
               cursor: pointer;
               border-radius: 50%;
               z-index: 2;
-              box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-              
-
+              box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);           
               transition: all 0.2s ease;
               &:active,&:focus,&:hover {
-                    width: 20px;
-                    height: 20px;
-                    box-shadow: 0px 0px 1px 10px $primary-color-alpha;
-                      box-sizing: border-box;
+                  width: 20px;
+                  height: 20px;
+                  box-shadow: 0px 0px 1px 10px #eee;
+//                  box-sizing: border-box;
               }
         }
         &:disabled::-webkit-slider-thumb {
@@ -567,7 +581,7 @@ $primary-color-alpha:rgba(63,81,181,0.2);
         }
         & ~ .mt-slider-highlight {
               position: absolute;
-              top: 12px;
+              top: 10px;
               left: 0px;
               height: 3px;
               background-color: $primary-color;
@@ -580,19 +594,19 @@ $primary-color-alpha:rgba(63,81,181,0.2);
         }
     }
 }
-
+/*ripple for slider*/
 .sliderRippleEffect {
-  position: absolute;
-  top: 12px;
-  box-sizing: border-box;
-  width: 1px;
-  height: 1px;
-  background-color: rgba(33, 150, 243, 0.3);
-  display: inline-table;
-  border-radius: 50%;
-  opacity: 0;
-  pointer-events: none;
-  animation: sliderRippleEffect 0.5s ease-out;
+    position: absolute;
+    top: 12px;
+    box-sizing: border-box;
+    width: 1px;
+    height: 1px;
+    background-color: rgba(33, 150, 243, 0.3);
+    display: inline-table;
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+    animation: sliderRippleEffect 0.5s ease-out;
 }
 
 @keyframes sliderRippleEffect {
@@ -614,11 +628,9 @@ $primary-color-alpha:rgba(63,81,181,0.2);
 
 
 /*css for input fields*/
-
 .mt-form {
   position: relative;
 }
-
 .mt-input {
   font-size: 1em;
   padding: 2px;
@@ -641,7 +653,7 @@ $primary-color-alpha:rgba(63,81,181,0.2);
 }
 
 .placeholder {
-  font-family: "Roboto";
+//  font-family: "Roboto";
   color: rgb(148, 148, 148);
   position: absolute;
   top: 20px;
@@ -669,8 +681,8 @@ $primary-color-alpha:rgba(63,81,181,0.2);
   color: rgb(148, 148, 148);
 }
 
-/*css for loader*/
 
+/*css for loader*/
 .mt-circle-loader {
     width: 40px;
     height: 40px;
@@ -680,7 +692,6 @@ $primary-color-alpha:rgba(63,81,181,0.2);
     z-index: 1;
     animation: mt-loader-dash 2s ease infinite, mt-loader-rotate 2s linear infinite;
 }
-
 @keyframes mt-loader-dash {
   0% {
     stroke-dasharray: 1,95;
@@ -697,8 +708,6 @@ $primary-color-alpha:rgba(63,81,181,0.2);
     stroke-dashoffset: -93;
   }
 }
-
-
 @keyframes mt-loader-rotate {
   0% {
     transform: rotate(0deg);
@@ -711,41 +720,39 @@ $primary-color-alpha:rgba(63,81,181,0.2);
 
 
 /*css for progress*/
-
 .mt-progress {
-  position: relative;
-  width: 200px;
-  height: 3px;
-  border-radius: 3px;
-  display: inline-block;
-  overflow: hidden;
-  z-index: 1;
-  background-color: rgba(33, 150, 243, 0.2);
-  &::-webkit-progress-bar {
-    background-color: rgba(33, 150, 243, 0.2);
-  }
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -75%;
-    width: 75%;
-    height: 3px;
-    display: inline-block;
-    background-color: $primary-color;
-    animation: mt-progress-process 1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
-  }
+      position: relative;
+      width: 200px;
+      height: 3px;
+      border-radius: 3px;
+      display: inline-block;
+      overflow: hidden;
+      z-index: 1;
+      background-color: rgba(33, 150, 243, 0.2);
+      &::-webkit-progress-bar {
+            background-color: rgba(33, 150, 243, 0.2);
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -75%;
+        width: 75%;
+        height: 3px;
+        display: inline-block;
+        background-color: $primary-color;
+        animation: mt-progress-process 1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+      }
 }
 
 @keyframes mt-progress-process {
-  0% {}
-
   100% {
     left: 100%;
   }
 }
 
 
+/*css for cardview*/
 mt-card, .mt-card {
     width: 100%;
     padding: 15px;
@@ -757,8 +764,9 @@ mt-card, .mt-card {
     z-index: 2;
 }
 
+/*css for drawer*/
 .mt-drawer{
-    font-family: Roboto;
+//    font-family: Roboto;
     position: relative;
     width: 100%;
     
@@ -971,7 +979,7 @@ mt-card, .mt-card {
     ul{
         padding: 0;
         margin: 0;
-        font-family: Roboto;
+//        font-family: Roboto;
         border: 1px solid #ddd;
         li{
             position: relative;
@@ -984,7 +992,7 @@ mt-card, .mt-card {
             a{
                 text-decoration: none;
                 display: block;
-                padding: 10px;
+                padding: 15px;
                 color:#000;
                 
                 &:hover{
@@ -1026,7 +1034,7 @@ mt-card, .mt-card {
 
 
 .mt-alert{
-    font-family: Roboto; 
+//    font-family: Roboto; 
     position: fixed;
     top: 0;
     left: 0;

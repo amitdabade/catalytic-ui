@@ -1,6 +1,19 @@
-/*css for buttons*/
+/*! catalytic.js
+ * Copyright (c) 2018 Catalytic-UI
+ * Licensed under the MIT license */
+[class^="mt-"], [class*=" mt-"] {
+  font-family: 'Roboto' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+/*css for raised buttons*/
 .mt-button {
-  font-family: "Roboto";
   font-size: 1em;
   padding: 10px 10px;
   margin: 3px;
@@ -21,7 +34,6 @@
   z-index: 2;
   transition: all 0.5s ease; }
   .mt-button input, .mt-button button {
-    font-family: "Roboto";
     font-size: 1em;
     padding: 0px;
     background-color: #2196F3;
@@ -39,6 +51,7 @@
     color: rgba(0, 0, 0, 0.4);
     box-shadow: 0px 0px 0px transparent; }
 
+/*css for flat buttons*/
 .mt-button-flat {
   background-color: transparent;
   color: #2196F3;
@@ -54,6 +67,7 @@
     background-color: transparent;
     color: rgba(0, 0, 0, 0.4); }
 
+/*css for fab buttons*/
 .mt-button-fab {
   border-radius: 50%;
   width: 50px;
@@ -72,15 +86,23 @@
   pointer-events: none;
   animation: rippleEffect 0.7s ease-in-out; }
 
+.rippleDarkEffect {
+  border-radius: 50%;
+  background-color: rgba(148, 148, 148, 0.4);
+  position: absolute;
+  transform: scale(0);
+  pointer-events: none;
+  animation: rippleEffect 0.7s ease-in-out; }
+
 @keyframes rippleEffect {
   100% {
     transform: scale(3);
     opacity: 0; } }
 
+/*css for toggle buttons*/
 .mt-toggle-button {
   position: relative;
   overflow: hidden;
-  font-family: Roboto;
   text-align: center;
   background: #ddd;
   display: inline-table;
@@ -106,7 +128,6 @@
 /*css for radio button*/
 .mt-radio {
   position: relative;
-  font-family: "Roboto";
   display: inline-block;
   outline: none;
   -webkit-tap-highlight-color: transparent;
@@ -163,13 +184,14 @@
         .mt-radio label .mt-radio-input input[type='radio']:checked:disabled:after {
           background: rgba(0, 0, 0, 0.3); }
 
+/*ripple for radio button*/
 .radioRippleEffect {
   position: absolute;
   top: 3px;
   left: 4px;
   width: 14px;
   height: 14px;
-  background-color: rgba(63, 81, 181, 0.2);
+  background-color: #2196F3;
   display: inline-block;
   border-radius: 50%;
   opacity: 0;
@@ -178,18 +200,18 @@
 
 @keyframes circleRippleEffect {
   50% {
-    opacity: 0.6;
+    opacity: 0.2;
     transform: scale(2.8); }
   90% {
-    opacity: 0.3;
+    opacity: 0.1;
     transform: scale(3.2); }
   100% {
-    opacity: 0.1;
+    opacity: 0;
     transform: scale(3.8); } }
 
+/*css for checkbox*/
 .mt-checkbox {
   position: relative;
-  font-family: "Roboto";
   display: inline-block;
   outline: none;
   -webkit-tap-highlight-color: transparent;
@@ -249,13 +271,14 @@
           opacity: 1;
           color: #fff; }
 
+/*ripple for checkbox*/
 .checkboxRippleEffect {
   position: absolute;
   top: 3px;
   left: 3px;
   width: 14px;
   height: 14px;
-  background-color: rgba(63, 81, 181, 0.2);
+  background-color: #2196F3;
   display: inline-table;
   border-radius: 50%;
   opacity: 0;
@@ -263,18 +286,17 @@
 
 @keyframes checkboxRippleEffect {
   50% {
-    opacity: 0.6;
+    opacity: 0.2;
     transform: scale(2.8); }
   90% {
-    opacity: 0.3;
+    opacity: 0.1;
     transform: scale(3.2); }
   100% {
-    opacity: 0.1;
+    opacity: 0;
     transform: scale(3.8); } }
 
 /*css for switch*/
 .mt-switch {
-  font-family: Roboto;
   position: relative;
   display: inline-block;
   outline: none;
@@ -320,48 +342,47 @@
           box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
           transition: all 0.2s ease; }
         .mt-switch label .mt-switch-input input[type='checkbox']:checked:before {
-          background-color: rgba(63, 81, 181, 0.2); }
+          background-color: #2196F3;
+          opacity: 0.4; }
         .mt-switch label .mt-switch-input input[type='checkbox']:checked:after {
           left: 16px;
           background-color: #2196F3; }
         .mt-switch label .mt-switch-input input[type='checkbox']:checked:disabled:before {
-          background-color: #dddddd; }
+          background-color: #999999; }
         .mt-switch label .mt-switch-input input[type='checkbox']:not(:checked) ~ .switchRippleEffect {
-          left: 5px; }
+          left: 4px; }
         .mt-switch label .mt-switch-input input[type='checkbox']:disabled {
           cursor: not-allowed; }
           .mt-switch label .mt-switch-input input[type='checkbox']:disabled:before {
-            background-color: #dddddd; }
+            background-color: rgba(153, 153, 153, 0.4); }
           .mt-switch label .mt-switch-input input[type='checkbox']:disabled:after {
             background-color: #949494; }
         .mt-switch label .mt-switch-input input[type='checkbox']:checked:disabled:after {
           background-color: #949494; }
 
+/*ripple for switch*/
 .switchRippleEffect {
   position: absolute;
   top: 0px;
-  left: 22px;
+  left: 21px;
   width: 15px;
   height: 15px;
-  background-color: rgba(63, 81, 181, 0.2);
+  background-color: #2196F3;
   display: inline-block;
   border-radius: 50%;
   opacity: 0;
   transform: scale(0);
-  animation: switchRippleEffect 0.5s ease-out; }
-
-.mt-switch-input:not(:checked) ~ .switchRippleEffect {
-  left: 8px; }
+  animation: switchRippleEffect 0.5s ease-out 0.0s; }
 
 @keyframes switchRippleEffect {
   50% {
-    opacity: 0.6;
+    opacity: 0.2;
     transform: scale(3); }
   90% {
-    opacity: 0.3;
+    opacity: 0.1;
     transform: scale(3.5); }
   100% {
-    opacity: 0.1;
+    opacity: 0;
     transform: scale(4); } }
 
 /*css for slider*/
@@ -393,8 +414,7 @@
       .mt-slider input[type='range']::-webkit-slider-thumb:active, .mt-slider input[type='range']::-webkit-slider-thumb:focus, .mt-slider input[type='range']::-webkit-slider-thumb:hover {
         width: 20px;
         height: 20px;
-        box-shadow: 0px 0px 1px 10px rgba(63, 81, 181, 0.2);
-        box-sizing: border-box; }
+        box-shadow: 0px 0px 1px 10px #eee; }
     .mt-slider input[type='range']:disabled::-webkit-slider-thumb {
       background-color: #949494;
       cursor: not-allowed; }
@@ -434,7 +454,7 @@
       background: #2196F3; }
     .mt-slider input[type='range'] ~ .mt-slider-highlight {
       position: absolute;
-      top: 12px;
+      top: 10px;
       left: 0px;
       height: 3px;
       background-color: #2196F3;
@@ -444,6 +464,7 @@
     .mt-slider input[type='range']:disabled ~ .mt-slider-highlight {
       background-color: #949494; }
 
+/*ripple for slider*/
 .sliderRippleEffect {
   position: absolute;
   top: 12px;
@@ -491,7 +512,6 @@
     border-bottom: 1px solid rgba(148, 148, 148, 0.6); }
 
 .placeholder {
-  font-family: "Roboto";
   color: #949494;
   position: absolute;
   top: 20px;
@@ -565,10 +585,10 @@
     animation: mt-progress-process 1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite; }
 
 @keyframes mt-progress-process {
-  0% { }
   100% {
     left: 100%; } }
 
+/*css for cardview*/
 mt-card, .mt-card {
   width: 100%;
   padding: 15px;
@@ -579,8 +599,8 @@ mt-card, .mt-card {
   box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.4);
   z-index: 2; }
 
+/*css for drawer*/
 .mt-drawer {
-  font-family: Roboto;
   position: relative;
   width: 100%; }
   .mt-drawer .mt-action-bar {
@@ -743,7 +763,6 @@ mt-card, .mt-card {
   .mt-list ul {
     padding: 0;
     margin: 0;
-    font-family: Roboto;
     border: 1px solid #ddd; }
     .mt-list ul li {
       position: relative;
@@ -755,7 +774,7 @@ mt-card, .mt-card {
       .mt-list ul li a {
         text-decoration: none;
         display: block;
-        padding: 10px;
+        padding: 15px;
         color: #000; }
         .mt-list ul li a:hover {
           background: #eee; }
@@ -782,7 +801,6 @@ mt-card, .mt-card {
       color: gold; }
 
 .mt-alert {
-  font-family: Roboto;
   position: fixed;
   top: 0;
   left: 0;
