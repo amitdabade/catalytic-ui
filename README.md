@@ -2,7 +2,7 @@
   <img src="http://icons.iconarchive.com/icons/graphicloads/medical-health/128/formula-icon.png">
   <h1>Catalytic-UI</h1>
   
-  <p>Catalytic-UI is lightweight CSS framework for hybrid Android app development based on <u>Google's Material Design</u></p>
+  <p>Catalytic-UI is lightweight CSS framework for mobile web and hybrid mobile app development based on <em>Google's Material Design</em></p>
 
 </div>
 <hr/>
