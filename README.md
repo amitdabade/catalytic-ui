@@ -2,7 +2,8 @@
   <img src="http://icons.iconarchive.com/icons/graphicloads/medical-health/128/formula-icon.png">
   <h1>Catalytic-UI</h1>
   
-  <p>Catalytic-UI is lightweight CSS framework for mobile website and hybrid app development based on <em>Google's Material Design </em>guidelines. Catalytic-UI lets you add a Material Design look and feel to your websites so that it will look like native android app. It doesn't rely on any external JavaScript frameworks or libraries.</p>
+  <p>Catalytic-UI is lightweight CSS framework for developing hybrid mobile apps or web apps based on <em>Google's Material Design </em>guidelines. Catalytic-UI lets you add a Material Design look and feel to your web apps so that it will look like native android app without acquiring additional skillset.</p>
+
 
 </div>
 <hr/>
@@ -11,6 +12,7 @@
 ## Key Features:
 <div>
   <ul>
+    <li>Free and open source</li>
     <li>Lightweight (CSS 3.4KB gzipped | JS 1.8KB gzipped)</li>
     <li>No external dependencies</li>
     <li>Fully responsive layout for mobile and tablet view</li>
