@@ -8,7 +8,7 @@
 <hr/>
 
 
-**Key Features:**
+## Key Features:
 <div>
   <ul>
     <li>Lightweight (CSS 3.4KB gzipped | JS 1.8KB gzipped)</li>
@@ -19,7 +19,7 @@
 </div>
 
 
-**Use From the CDN:**
+## Use From the CDN:
 
 ```html
 <link href="https://cdn.rawgit.com/amitdabade/catalytic-ui/master/src/catalytic.min.css" rel="stylesheet" type="text/css" />
@@ -28,7 +28,7 @@
 
 Alternatively you can download repository and start using locally. 
 
-**QUICKSTART:**
+## QUICKSTART:
 
 HTML boilerplate
 
@@ -49,8 +49,14 @@ HTML boilerplate
 ```
 
 
-
+## Demo
 Check out demo - [Demo](https://codepen.io/amitdabade/pen/rpGQyV)
+
+## Preview
+<div>
+  <img src="screenshots/screenshot1.png" alt="screenshot" width="250px" height="auto" style="margin-right:20px;">
+  <img src="screenshots/screenshot2.png" alt="screenshot" width="250px" height="auto">
+</div>  
 
 
 ## License
