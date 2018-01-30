@@ -13,7 +13,7 @@
 <div>
   <ul>
     <li>Free and open source</li>
-    <li>Lightweight (CSS 3.4KB gzipped | JS 1.8KB gzipped)</li>
+    <li>Lightweight (CSS 3.5KB gzipped | JS 1.8KB gzipped)</li>
     <li>No external dependencies</li>
     <li>Fully responsive layout for mobile and tablet view</li>
     <li>Easy to customize (Available in SASS)</li>
