@@ -52,8 +52,8 @@ Alternatively you can download repository and start using locally.
 ```
 
 
-## Demo:
-Check out demo - [Demo](https://codepen.io/amitdabade/pen/rpGQyV)
+<!-- ## Demo:
+Check out demo - [Demo](https://codepen.io/amitdabade/pen/rpGQyV) -->
 
 ## Preview:
 <div>
